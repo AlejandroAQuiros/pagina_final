@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TechHub | Innovación Digital</title>
+    <link rel="stylesheet" href="src/styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container topbar-inner">
+        <div>
+          <p class="eyebrow">Explora la innovación</p>
+          <h1>TechHub</h1>
+        </div>
+        <a href="#form-section" class="primary-button">Agregar proyecto</a>
+      </div>
+    </header>
+
+    <main class="page container">
+      <section class="panel form-panel" id="form-section">
+        <div class="section-header">
+          <p class="eyebrow">Nuevo dato</p>
+          <h2>Registrar tecnología</h2>
+        </div>
+
+        <form id="technology-form" class="technology-form">
+          <label>
+            Nombre
+            <input type="text" name="name" placeholder="Ej. IA aplicada a salud" required />
+          </label>
+
+          <label>
+            Categoría
+            <input type="text" name="category" placeholder="Ej. Inteligencia artificial" required />
+          </label>
+
+          <label>
+            Impacto (%)
+            <input type="number" name="impact" min="0" max="100" step="1" placeholder="85" required />
+          </label>
+
+          <label>
+            Año
+            <input type="number" name="year" min="2020" max="2100" step="1" placeholder="2026" required />
+          </label>
+
+          <label>
+            Descripción
+            <textarea name="description" rows="4" placeholder="Describe la innovación tecnológica o proyecto"></textarea>
+          </label>
+
+          <button type="submit" class="primary-button full-width">Agregar tarjeta</button>
+        </form>
+      </section>
+
+      <section class="panel catalog-panel">
+        <div class="catalog-header">
+          <div>
+            <p class="eyebrow">Catálogo</p>
+            <h2>Innovaciones destacadas</h2>
+          </div>
+          <span id="technology-count" class="count-pill">0 tarjetas</span>
+        </div>
+
+        <div id="technology-list" class="technology-grid" aria-live="polite"></div>
+      </section>
+    </main>
+
+    <script type="module" src="src/app.js"></script>
+  </body>
+</html>
